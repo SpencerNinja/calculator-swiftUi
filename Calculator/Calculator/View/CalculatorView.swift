@@ -9,6 +9,8 @@ import SwiftUI
 
 struct CalculatorView: View {
     
+    @EnvironmentObject var characterViewModel: CharacterViewModel
+    
     var body: some View {
         
         ZStack {
@@ -17,7 +19,7 @@ struct CalculatorView: View {
             
             VStack {
                 Spacer()
-                Text("output numbers here")
+                Text(characterViewModel.characters)
                     .font(.largeTitle)
                     .foregroundColor(.gray)
                 Spacer()
