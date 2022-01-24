@@ -45,7 +45,7 @@ struct CalculatorView: View {
                     HStack {
                         ButtonKeyView(keyNumber: ".")
                         ButtonKeyView(keyNumber: "0")
-                        ButtonKeyView(keyNumber: "=")
+                        EqualKeyButton(keyNumber: "=")
                         ButtonKeyView(keyNumber: "➕")
                     }
                 }
