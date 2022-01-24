@@ -41,5 +41,12 @@ class CharacterViewModel: ObservableObject {
             }
         }
     }
+    /**
+     Logic of how to add numbers:
+     1. append numbers to a list when an operand is detected
+     2. store operand
+     3. when two numbers have been added to the list, use the operand to perform the operation on those values
+     4. or once the equal button is hit, execute the statement in order
+     */
 
 }
