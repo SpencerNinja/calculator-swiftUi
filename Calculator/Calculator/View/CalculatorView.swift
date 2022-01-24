@@ -60,7 +60,11 @@ struct CalculatorView: View {
 }
 
 struct ContentView_Previews: PreviewProvider {
+    
+//    @StateObject var characterViewModel: CharacterViewModel = CharacterViewModel()
+    
     static var previews: some View {
         CalculatorView()
+//            .environmentObject(characterViewModel)
     }
 }
