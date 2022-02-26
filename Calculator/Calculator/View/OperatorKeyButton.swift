@@ -27,8 +27,8 @@ struct OperatorKeyButton: View {
             RadialGradient(
                 colors: [Color.white, Color.green],
                 center: .center,
-                startRadius: 1,
-                endRadius: 50
+                startRadius: 0,
+                endRadius: 70
             )
         )
         .cornerRadius(10)

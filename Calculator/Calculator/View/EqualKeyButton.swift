@@ -27,8 +27,8 @@ struct EqualKeyButton: View {
             RadialGradient(
                 colors: [Color.blue, Color.black],
                 center: .center,
-                startRadius: 1,
-                endRadius: 50
+                startRadius: 0,
+                endRadius: 70
             )
         )
         .cornerRadius(10)

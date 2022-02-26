@@ -27,8 +27,8 @@ struct NumberKeyButton: View {
             RadialGradient(
                 colors: [Color.green, Color.black],
                 center: .center,
-                startRadius: 1,
-                endRadius: 50
+                startRadius: 0,
+                endRadius: 70
             )
         )
         .cornerRadius(10)
