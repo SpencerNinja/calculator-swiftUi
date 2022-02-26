@@ -20,7 +20,7 @@ class CalculatorViewModel: ObservableObject {
     }
     
     var selectedOperator = ""
-    @Published var isSelected: Bool = false
+//    @Published var isSelected: Bool = false
     
     @Published var displayValue: String = "0"
     var resultOfCalculation = 0
@@ -42,7 +42,7 @@ class CalculatorViewModel: ObservableObject {
     // Button with operator (+ - * /) is pressed
     func updateOperator(keyPressed: String) {
         selectedOperator = keyPressed
-        isSelected = true
+//        isSelected = true
     }
     
     // Button with = sign is pressed
@@ -63,6 +63,7 @@ class CalculatorViewModel: ObservableObject {
             displayValue = String(resultOfCalculation)
             firstOperandString = displayValue
             selectedOperator = ""
+            secondOperandString = "0"
         }
     }
     
