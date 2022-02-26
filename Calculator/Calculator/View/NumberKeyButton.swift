@@ -1,23 +1,23 @@
 //
-//  EqualKeyButtonView.swift
+//  KeyView.swift
 //  Calculator
 //
-//  Created by Spencer Hurd on 2/25/22.
+//  Created by Spencer Hurd on 1/22/22.
 //
 
 import SwiftUI
 
-struct EqualKeyButton: View {
+struct NumberKeyButton: View {
     
     @EnvironmentObject var calculatorViewModel: CalculatorViewModel
-    let equalKey: String
+    let keyNumber: String
     
     var body: some View {
         
         Button {
-            calculatorViewModel.calculateOperation()
+            calculatorViewModel.updateOperand(keyPressed: keyNumber)
         } label: {
-            Text(equalKey)
+            Text(keyNumber)
                 .font(.system(size: 50, weight: .bold, design: .monospaced))
                 .foregroundColor(.white)
         }
@@ -28,11 +28,12 @@ struct EqualKeyButton: View {
         .padding(5)
         
     }
+    
 }
 
-struct EqualKeyButtonView_Previews: PreviewProvider {
+struct KeyView_Previews: PreviewProvider {
     static var previews: some View {
-        EqualKeyButton(equalKey: "=")
+        NumberKeyButton(keyNumber: "1")
             .previewLayout(.sizeThatFits)
     }
 }

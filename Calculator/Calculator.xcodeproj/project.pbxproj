@@ -7,26 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B5751EE27C9C7250001992C /* EqualKeyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B5751ED27C9C7250001992C /* EqualKeyButton.swift */; };
 		0B693EB6279CD2E900C15FCE /* CalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B693EB5279CD2E900C15FCE /* CalculatorApp.swift */; };
 		0B693EB8279CD2E900C15FCE /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B693EB7279CD2E900C15FCE /* CalculatorView.swift */; };
 		0B693EBA279CD2EB00C15FCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B693EB9279CD2EB00C15FCE /* Assets.xcassets */; };
 		0B693EBD279CD2EB00C15FCE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0B693EBC279CD2EB00C15FCE /* Preview Assets.xcassets */; };
-		0B693EC7279CEB2600C15FCE /* ButtonKeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B693EC6279CEB2600C15FCE /* ButtonKeyView.swift */; };
-		0B693EC9279CEF8F00C15FCE /* CharacterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B693EC8279CEF8F00C15FCE /* CharacterModel.swift */; };
+		0B693EC7279CEB2600C15FCE /* NumberKeyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B693EC6279CEB2600C15FCE /* NumberKeyButton.swift */; };
 		0B693ECB279CF02900C15FCE /* CalculatorViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B693ECA279CF02900C15FCE /* CalculatorViewModel.swift */; };
-		0BFD9C11279E34A400D97914 /* EqualKeyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD9C10279E34A400D97914 /* EqualKeyButton.swift */; };
+		0BFD9C11279E34A400D97914 /* OperatorKeyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BFD9C10279E34A400D97914 /* OperatorKeyButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0B5751ED27C9C7250001992C /* EqualKeyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualKeyButton.swift; sourceTree = "<group>"; };
 		0B693EB2279CD2E900C15FCE /* Calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0B693EB5279CD2E900C15FCE /* CalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorApp.swift; sourceTree = "<group>"; };
 		0B693EB7279CD2E900C15FCE /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
 		0B693EB9279CD2EB00C15FCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0B693EBC279CD2EB00C15FCE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		0B693EC6279CEB2600C15FCE /* ButtonKeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonKeyView.swift; sourceTree = "<group>"; };
-		0B693EC8279CEF8F00C15FCE /* CharacterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterModel.swift; sourceTree = "<group>"; };
+		0B693EC6279CEB2600C15FCE /* NumberKeyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberKeyButton.swift; sourceTree = "<group>"; };
 		0B693ECA279CF02900C15FCE /* CalculatorViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorViewModel.swift; sourceTree = "<group>"; };
-		0BFD9C10279E34A400D97914 /* EqualKeyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualKeyButton.swift; sourceTree = "<group>"; };
+		0BFD9C10279E34A400D97914 /* OperatorKeyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperatorKeyButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,7 +80,6 @@
 		0B693EC3279CEA9B00C15FCE /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0B693EC8279CEF8F00C15FCE /* CharacterModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -89,8 +88,9 @@
 			isa = PBXGroup;
 			children = (
 				0B693EB7279CD2E900C15FCE /* CalculatorView.swift */,
-				0B693EC6279CEB2600C15FCE /* ButtonKeyView.swift */,
-				0BFD9C10279E34A400D97914 /* EqualKeyButton.swift */,
+				0B693EC6279CEB2600C15FCE /* NumberKeyButton.swift */,
+				0BFD9C10279E34A400D97914 /* OperatorKeyButton.swift */,
+				0B5751ED27C9C7250001992C /* EqualKeyButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -173,11 +173,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0BFD9C11279E34A400D97914 /* EqualKeyButton.swift in Sources */,
+				0B5751EE27C9C7250001992C /* EqualKeyButton.swift in Sources */,
+				0BFD9C11279E34A400D97914 /* OperatorKeyButton.swift in Sources */,
 				0B693EB8279CD2E900C15FCE /* CalculatorView.swift in Sources */,
-				0B693EC9279CEF8F00C15FCE /* CharacterModel.swift in Sources */,
 				0B693EB6279CD2E900C15FCE /* CalculatorApp.swift in Sources */,
-				0B693EC7279CEB2600C15FCE /* ButtonKeyView.swift in Sources */,
+				0B693EC7279CEB2600C15FCE /* NumberKeyButton.swift in Sources */,
 				0B693ECB279CF02900C15FCE /* CalculatorViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

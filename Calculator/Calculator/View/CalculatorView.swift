@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CalculatorView: View {
     
-    @EnvironmentObject var characterViewModel: CharacterViewModel
+    @EnvironmentObject var calculatorViewModel: CalculatorViewModel
     
     var body: some View {
         
@@ -19,42 +19,39 @@ struct CalculatorView: View {
             
             VStack {
                 Spacer()
-                Text(characterViewModel.characters)
+                Text(calculatorViewModel.displayValue)
                     .font(.largeTitle)
                     .foregroundColor(.gray)
                 Spacer()
                 VStack {
                     HStack {
-                        ButtonKeyView(keyNumber: "1")
-                        ButtonKeyView(keyNumber: "2")
-                        ButtonKeyView(keyNumber: "3")
-                        ButtonKeyView(keyNumber: "➗")
+                        NumberKeyButton(keyNumber: "1")
+                        NumberKeyButton(keyNumber: "2")
+                        NumberKeyButton(keyNumber: "3")
+                        OperatorKeyButton(keyOperator: "➗")
                     }
                     HStack {
-                        ButtonKeyView(keyNumber: "4")
-                        ButtonKeyView(keyNumber: "5")
-                        ButtonKeyView(keyNumber: "6")
-                        ButtonKeyView(keyNumber: "✖️")
+                        NumberKeyButton(keyNumber: "4")
+                        NumberKeyButton(keyNumber: "5")
+                        NumberKeyButton(keyNumber: "6")
+                        OperatorKeyButton(keyOperator: "✖️")
                     }
                     HStack {
-                        ButtonKeyView(keyNumber: "7")
-                        ButtonKeyView(keyNumber: "8")
-                        ButtonKeyView(keyNumber: "9")
-                        ButtonKeyView(keyNumber: "➖")
+                        NumberKeyButton(keyNumber: "7")
+                        NumberKeyButton(keyNumber: "8")
+                        NumberKeyButton(keyNumber: "9")
+                        OperatorKeyButton(keyOperator: "➖")
                     }
                     HStack {
-                        ButtonKeyView(keyNumber: ".")
-                        ButtonKeyView(keyNumber: "0")
-                        EqualKeyButton(keyNumber: "=")
-                        ButtonKeyView(keyNumber: "➕")
+                        NumberKeyButton(keyNumber: ".")
+                        NumberKeyButton(keyNumber: "0")
+                        EqualKeyButton(equalKey: "=")
+                        OperatorKeyButton(keyOperator: "➕")
                     }
                 }
                 .font(.system(size: 50, weight: .bold))
             }
         }
-        // Alternate way to change background color
-        // .frame(maxWidth: .infinity, maxHeight: .infinity) // 1
-        // .background(Color.black)
         
     }
 }
