@@ -26,13 +26,15 @@ struct CalculatorView: View {
                 Spacer()
                 Spacer()
                 Text(calculatorViewModel.displayValue)
-                    .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
+                    .font(.largeTitle)
                     .bold()
                     .foregroundColor(.white)
                     .frame(
                         width: UIScreen.main.bounds.size.width - 60,
-                        height: 60
+                        height: 60,
+                        alignment: .trailing
                     )
+                    .padding(.trailing)
                     .background(
                         Color.black
                             .opacity(0.7)
