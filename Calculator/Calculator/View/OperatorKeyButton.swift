@@ -10,6 +10,7 @@ import SwiftUI
 struct OperatorKeyButton: View {
     
     @EnvironmentObject var calculatorViewModel: CalculatorViewModel
+    
     let keyOperator: String
     
     var body: some View {

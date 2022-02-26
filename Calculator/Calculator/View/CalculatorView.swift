@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CalculatorView: View {
     
-    @EnvironmentObject var calculatorViewModel: CalculatorViewModel
+    @StateObject var calculatorViewModel: CalculatorViewModel = CalculatorViewModel()
     
     var body: some View {
         
@@ -52,6 +52,7 @@ struct CalculatorView: View {
                 .font(.system(size: 50, weight: .bold))
             }
         }
+        .environmentObject(calculatorViewModel)
         
     }
 }

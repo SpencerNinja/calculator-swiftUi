@@ -10,6 +10,7 @@ import SwiftUI
 struct EqualKeyButton: View {
     
     @EnvironmentObject var calculatorViewModel: CalculatorViewModel
+    
     let equalKey: String
     
     var body: some View {

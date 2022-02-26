@@ -10,6 +10,7 @@ import SwiftUI
 struct NumberKeyButton: View {
     
     @EnvironmentObject var calculatorViewModel: CalculatorViewModel
+    
     let keyNumber: String
     
     var body: some View {
