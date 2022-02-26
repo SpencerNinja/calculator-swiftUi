@@ -23,34 +23,35 @@ class CalculatorViewModel: ObservableObject {
     @Published var isSelected: Bool = false
     
     @Published var displayValue: String = "0"
+    var resultOfCalculation = 0
     
-    // Key with number is pressed
+    // Button with number value is pressed
     func updateOperand(keyPressed: String) {
         if selectedOperator == "" {
-            if (displayValue == "0") {
-                displayValue = ""
-            }
             firstOperandString.append(keyPressed)
             displayValue = firstOperandString
         } else {
-            if (displayValue == "0") {
-                displayValue = ""
-            }
             secondOperandString.append(keyPressed)
             displayValue = secondOperandString
         }
+        if (displayValue.first == "0") {
+            displayValue = String(displayValue.dropFirst())
+        }
     }
     
-    // Key with operator (+ - * /) is pressed
+    // Button with operator (+ - * /) is pressed
     func updateOperator(keyPressed: String) {
+        if resultOfCalculation != 0 {
+            firstOperandString = displayValue
+            selectedOperator = ""
+        }
         selectedOperator = keyPressed
         isSelected = true
     }
     
-    // Key with = sign is pressed
+    // Button with = sign is pressed
     func calculateOperation() {
         if firstOperand != 0 && secondOperand != 0 {
-            var resultOfCalculation = 0
             switch selectedOperator {
             case "➕":
                 resultOfCalculation = Int(firstOperand) + Int(secondOperand)
