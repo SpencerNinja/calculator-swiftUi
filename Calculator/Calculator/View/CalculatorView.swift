@@ -15,13 +15,20 @@ struct CalculatorView: View {
         
         ZStack {
             // Change screen background color
-            Color.black.ignoresSafeArea()
+            LinearGradient(
+                colors: [Color.mint, Color.green, Color.black],
+                startPoint: .topLeading,
+                endPoint: .bottomTrailing
+            )
+                .ignoresSafeArea()
             
             VStack {
                 Spacer()
+                Spacer()
                 Text(calculatorViewModel.displayValue)
-                    .font(.largeTitle)
-                    .foregroundColor(.gray)
+                    .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
+                    .bold()
+                    .foregroundColor(.white)
                 Spacer()
                 VStack {
                     HStack {

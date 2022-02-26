@@ -20,10 +20,17 @@ struct OperatorKeyButton: View {
         } label: {
             Text(keyOperator)
                 .font(.system(size: 50, weight: .bold, design: .monospaced))
-                .foregroundColor(Color.black)
+                .foregroundColor(Color.white)
         }
         .frame(width: 75, height: 75)
-        .background(Color.green)
+        .background(
+            RadialGradient(
+                colors: [Color.white, Color.green],
+                center: .center,
+                startRadius: 1,
+                endRadius: 50
+            )
+        )
         .cornerRadius(10)
         //.shadow(color: Color.yellow, radius: 10, x: 3, y: 3)
         .padding(5)
@@ -34,7 +41,7 @@ struct OperatorKeyButton: View {
 
 struct EqualKeyButton_Previews: PreviewProvider {
     static var previews: some View {
-        OperatorKeyButton(keyOperator: "1")
+        OperatorKeyButton(keyOperator: "➗")
             .previewLayout(.sizeThatFits)
     }
 }

@@ -41,10 +41,6 @@ class CalculatorViewModel: ObservableObject {
     
     // Button with operator (+ - * /) is pressed
     func updateOperator(keyPressed: String) {
-        if resultOfCalculation != 0 {
-            firstOperandString = displayValue
-            selectedOperator = ""
-        }
         selectedOperator = keyPressed
         isSelected = true
     }
@@ -65,6 +61,8 @@ class CalculatorViewModel: ObservableObject {
                 print("No operator selected")
             }
             displayValue = String(resultOfCalculation)
+            firstOperandString = displayValue
+            selectedOperator = ""
         }
     }
     

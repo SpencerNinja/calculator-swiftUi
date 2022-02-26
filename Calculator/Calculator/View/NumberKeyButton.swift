@@ -23,7 +23,14 @@ struct NumberKeyButton: View {
                 .foregroundColor(.white)
         }
         .frame(width: 75, height: 75)
-        .background(Color.green)
+        .background(
+            RadialGradient(
+                colors: [Color.green, Color.black],
+                center: .center,
+                startRadius: 1,
+                endRadius: 50
+            )
+        )
         .cornerRadius(10)
         //.shadow(color: Color.yellow, radius: 10, x: 3, y: 3)
         .padding(5)
