@@ -16,7 +16,12 @@ struct CalculatorView: View {
         ZStack {
             // Change screen background color
             LinearGradient(
-                colors: [Color.mint, Color.green, Color.black],
+                colors: [
+                    Color.mint,
+                    Color.green,
+                    Color.black,
+                    Color.black
+                ],
                 startPoint: .topLeading,
                 endPoint: .bottomTrailing
             )
