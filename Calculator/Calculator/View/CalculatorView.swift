@@ -89,3 +89,14 @@ struct ContentView_Previews: PreviewProvider {
 //            .environmentObject(characterViewModel)
     }
 }
+
+/*
+ Layout of buttons
+                1st column      2nd column      3rd column      4th column
+    1st row     1               2               3               +
+    2nd row     4               5               6               -
+    3rd row     7               8               9               *
+    4th row     .               0               =               /
+ 
+        
+ */
