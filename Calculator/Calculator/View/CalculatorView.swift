@@ -29,6 +29,15 @@ struct CalculatorView: View {
                     .font(/*@START_MENU_TOKEN@*/.largeTitle/*@END_MENU_TOKEN@*/)
                     .bold()
                     .foregroundColor(.white)
+                    .frame(
+                        width: UIScreen.main.bounds.size.width - 60,
+                        height: 60
+                    )
+                    .background(
+                        Color.black
+                            .opacity(0.7)
+                    )
+                    .cornerRadius(10)
                 Spacer()
                 VStack {
                     HStack {
